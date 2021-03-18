@@ -1,0 +1,10 @@
+<h1>Student List</h1>
+<p>(Total <%= pluralize(@students.count, 'student') %>)</p>
+
+<h3><%= link_to "New Student", new_student_path %></h3>
+
+<% @students.each do |student| %>
+  <p>  
+    <%= link_to student.name, student %>  
+  </p>
+<% end %>
